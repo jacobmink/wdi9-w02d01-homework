@@ -123,4 +123,15 @@ for (let i = 0; i < bondFilms.length; i++){
         oddBonds.push(bondFilms[i]);
     }
 }
-console.log(oddBonds);
+// console.log(oddBonds);
+
+// 7)
+const grossArr = [];
+let sum = 0;
+for (let i = 0; i < bondFilms.length; i++){
+    grossArr.push(parseInt(bondFilms[i]["gross"].replace(/,|\$/g,'')));
+}
+for (let i = 0; i < grossArr.length; i++){
+    sum += grossArr[i];
+}
+console.log(`The Bond movies made $${sum} cumulatively.`);
