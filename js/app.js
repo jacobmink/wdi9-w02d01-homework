@@ -138,44 +138,33 @@ console.log(`The Bond movies made $${sum} cumulatively.`);
 
 // HUNGRY FOR MORE
 
-/*
-loop through actors, add 1 to value when an actor's name shows up, then 
-create an object with actors' names as keys and number of their occurences
-as values.
-
-look at each movie object, look at actor name.
-
-const actorObject = {};
+const actorsArr = [];
 for (let i = 0; i < bondFilms.length; i++){
-    actorObject[bondFilms[i]["actor"]] += 1;
+    actorsArr.push(bondFilms[i]["actor"]);
 }
-
-
-*/
-// const actorsArr = [];
-// for (let i = 0; i < bondFilms.length; i++){
-//     actorsArr.push(bondFilms[i]["actor"]);
-// }
-// console.log(actorsArr);
-// for (let i = 0; i < actorsArr.length; i++){
-//     for (let j = 1; j < actorsArr.length; j++){
-//     if (i != j){
-//         if (actorsArr[i] == actorsArr[j]){
-//             actorsArr.splice(actorsArr[j],1);
-//         }
-//     }
-// }
-// }
 // console.log(actorsArr);
 
 const actorObject = {};
+for (let i = 0; i < actorsArr.length; i++){
+    actorObject[actorsArr[i]] = 0;
+}
 for (let i = 0; i < bondFilms.length; i++){
-    actorObject[bondFilms[i]["actor"]] = 0;
+    // actorObject[bondFilms[i]["actor"]] = 0;
     actorObject[bondFilms[i]["actor"]] += 1;
 }
-
-// for (let i = 0; i < Object.keys(actorObject).length; i++){
-
-// }
 
 console.log(actorObject);
+
+const valueSortArr = Object.values(actorObject).sort(function(a,b) {
+    return a - b;
+});
+// console.log(valueSortArr);
+
+const origKey = Object.keys(actorObject).find(key => actorObject[key] === 1);
+let worstMovie;
+for (let i = 0; i < bondFilms.length; i++){
+    if (bondFilms[i].actor == origKey){
+        worstMovie = bondFilms[i];
+    }
+}
+console.log(worstMovie);
