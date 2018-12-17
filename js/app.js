@@ -135,3 +135,47 @@ for (let i = 0; i < grossArr.length; i++){
     sum += grossArr[i];
 }
 console.log(`The Bond movies made $${sum} cumulatively.`);
+
+// HUNGRY FOR MORE
+
+/*
+loop through actors, add 1 to value when an actor's name shows up, then 
+create an object with actors' names as keys and number of their occurences
+as values.
+
+look at each movie object, look at actor name.
+
+const actorObject = {};
+for (let i = 0; i < bondFilms.length; i++){
+    actorObject[bondFilms[i]["actor"]] += 1;
+}
+
+
+*/
+// const actorsArr = [];
+// for (let i = 0; i < bondFilms.length; i++){
+//     actorsArr.push(bondFilms[i]["actor"]);
+// }
+// console.log(actorsArr);
+// for (let i = 0; i < actorsArr.length; i++){
+//     for (let j = 1; j < actorsArr.length; j++){
+//     if (i != j){
+//         if (actorsArr[i] == actorsArr[j]){
+//             actorsArr.splice(actorsArr[j],1);
+//         }
+//     }
+// }
+// }
+// console.log(actorsArr);
+
+const actorObject = {};
+for (let i = 0; i < bondFilms.length; i++){
+    actorObject[bondFilms[i]["actor"]] = 0;
+    actorObject[bondFilms[i]["actor"]] += 1;
+}
+
+// for (let i = 0; i < Object.keys(actorObject).length; i++){
+
+// }
+
+console.log(actorObject);
