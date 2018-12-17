@@ -1,6 +1,6 @@
 // DATA STRUCTURES
 
-// Data Types
+// 1) Data Types
 // light switch: boolean -> const lightSwitch = true;
 // email address: string -> 'fake@nothing.com';
 // spaceship: object -> const ship = {body: hull, weapons: laser blasters, tools: [tractor beam, warp drive]};
@@ -11,7 +11,7 @@
 //  const hugeList = [{name: 'student1',location: 'Alabama', fave_shows: [tvShow1,tvShow2]},
 //                      {name: 'student2',location: 'New York', fave_shows: [tvShow1,tvShow2]}];
 
-// Take it Easy
+// 2) Take it Easy
 // 1)
 const colorArr = ['red','orange','yellow','green','blue','indigo','violet'];
 // 2)
@@ -21,38 +21,38 @@ const jake = {favoriteFood: 'noodles', hobby: 'skyweaving', townName: 'Denver', 
 // 4)
 console.log(jake.hobby);
 
-// Crazy Object!
+// 3) Crazy Object!
 const crazyObject = {
-    taco: [
-      {
-        meat: 'steak',
-        cheese: ['panela', 'queso', 'chihuahua']
-      },
-      {
-        meat: 'chicken',
-        salsa: ["pico", "hot", "hotter", "really hot", "really really hot", "omg my mouth is burning"]
-      },
-    ],
-    larry: {
-      nicknames: ["LD", "Chicken Teriyaki Boyyyyyy"],
-      quotes: ["Pretty pretty prettayyyyy good", "Is that a parkinson's thing?", "women love a self confident bald man", "I'm a walking talking enigma"],
-      characters: [
-        {
-          name: "Jeff",
-          occupation: "manager"
-        },
-        {
-          name: "funkhauser",
-          occupation: "tv dude"
-        },
-        {
-          name: "susie",
-          occupation: "jeffs wife",
-          favourtieHobby: "Swearing at Larry and Jeff"
-        },
-      ]
-    }
-  }
+taco: [
+    {
+    meat: 'steak',
+    cheese: ['panela', 'queso', 'chihuahua']
+    },
+    {
+    meat: 'chicken',
+    salsa: ["pico", "hot", "hotter", "really hot", "really really hot", "omg my mouth is burning"]
+    },
+],
+larry: {
+    nicknames: ["LD", "Chicken Teriyaki Boyyyyyy"],
+    quotes: ["Pretty pretty prettayyyyy good", "Is that a parkinson's thing?", "women love a self confident bald man", "I'm a walking talking enigma"],
+    characters: [
+    {
+        name: "Jeff",
+        occupation: "manager"
+    },
+    {
+        name: "funkhauser",
+        occupation: "tv dude"
+    },
+    {
+        name: "susie",
+        occupation: "jeffs wife",
+        favourtieHobby: "Swearing at Larry and Jeff"
+    },
+    ]
+}
+}
 
 console.log(crazyObject.taco[1].salsa[5]);
 console.log(crazyObject.larry.quotes[0]);
@@ -60,7 +60,7 @@ console.log(crazyObject.larry.characters[2].favourtieHobby);
 console.log(crazyObject.larry.nicknames[1]);
 console.log(crazyObject.larry.characters[1]);
 
-// Object-ception
+// 4) Object-ception
 const inception = {
     reality: {
         dreamLayer1: {
@@ -79,11 +79,11 @@ const inception = {
     }
  }
 
- inception.reality.dreamLayer1.dreamLayer2.dreamLayer3.dreamLayer4.dreamLayer5.dreamLayer6.limbo = null;
- console.log(inception);
+inception.reality.dreamLayer1.dreamLayer2.dreamLayer3.dreamLayer4.dreamLayer5.dreamLayer6.limbo = null;
+console.log(inception);
 
  // Bond Films
- const bondFilms = [
+const bondFilms = [
     { "title" : "Skyfall", "year" : 2012, "actor" : "Daniel Craig", "gross" : "$1,108,561,008" },
     { "title" : "Thunderball", "year" : 1965, "actor" : "Sean Connery", "gross" : "$1,014,941,117" },
     { "title" : "Goldfinger", "year" : 1964, "actor" : "Sean Connery", "gross" : "$912,257,512" },
@@ -107,10 +107,20 @@ const inception = {
     { "title" : "The Living Daylights", "year" : 1987, "actor" : "Timothy Dalton", "gross" : "$381,088,866" },
     { "title" : "A View to a Kill", "year" : 1985, "actor" : "Roger Moore", "gross" : "$321,172,633" },
     { "title" : "License to Kill", "year" : 1989, "actor" : "Timothy Dalton", "gross" : "$285,157,191" }
-  ];
+];
 
-  const bondTitles = [];
-  for (let i = 0; i < bondFilms.length; i++){
-      bondTitles.push(bondFilms[i]["title"]);
-  }
-  console.log(bondTitles);
+// 5)
+const bondTitles = [];
+for (let i = 0; i < bondFilms.length; i++){
+    bondTitles.push(bondFilms[i]["title"]);
+}
+console.log(bondTitles);
+
+// 6)
+const oddBonds = [];
+for (let i = 0; i < bondFilms.length; i++){
+    if (bondFilms[i]["year"] % 2 != 0){
+        oddBonds.push(bondFilms[i]);
+    }
+}
+console.log(oddBonds);
